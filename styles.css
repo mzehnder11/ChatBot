@@ -18,12 +18,16 @@ body {
     top: 2vh;
     left: 2vw;
     background-color: #007bff;
-    padding: 1px 15px;
+    padding: 0 15px;
     border-radius: 10px;
 }
 
 .instruction-link:hover {
     background-color: #007bffb7;
+}
+
+.instruction-link-icon {
+    display: none;
 }
 
 .div-right {
@@ -117,4 +121,20 @@ body {
     .message {
         max-width: 90vw;
     }
+}
+
+@media (max-width: 700px) {
+    .instruction-link {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .instruction-link-text {
+        display: none;
+    }
+
+    .instruction-link-icon {
+        display: block;
+    }
+
 }
