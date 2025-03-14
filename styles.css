@@ -10,6 +10,22 @@ body {
     display: flex;
 }
 
+.instruction-link {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 2vh;
+    left: 2vw;
+    background-color: #007bff;
+    padding: 1px 15px;
+    border-radius: 10px;
+}
+
+.instruction-link:hover {
+    background-color: #007bffb7;
+}
+
 .div-right {
     background-color: #060606;
     width: 100vw;
@@ -59,6 +75,9 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
+}
+.chatbot-input button:hover {
+    background-color: #007bffb7;
 }
 .message {
     margin: 5px 0;
