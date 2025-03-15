@@ -3,6 +3,8 @@
 # Ollama installieren
 curl -fsSL https://ollama.com/install.sh | sh
 
+npm install express cors
+
 # Ollama ausführen (im Hintergrund)
 ollama serve &
 
