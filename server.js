@@ -3,6 +3,7 @@ const cors = require('cors');
 const { spawn } = require('child_process');
 const app = express();
 const port = 3000;
+let prePromt = "Bitte mache auf die Antwort auf folgende frage keine Formatierung";
 
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
@@ -36,7 +37,8 @@ app.post('/send-message', (req, res) => {
     });
 
     // Write the user message to the ollama process
-    ollamaProcess.stdin.write(`${userMessage}\n`);
+    // ollamaProcess.stdin.write(`${prePromt}":"${userMessage}\n`);
+    ollamaProcess.stdin.write(prePromt + ":" + userMessage);
     ollamaProcess.stdin.end();
 });
 

@@ -48,8 +48,24 @@ function sendMessage(event) {
     userMessageContainer.classList.add('message', 'user-message');
     userMessageContainer.textContent = userMessage;
     document.getElementById('chatbot-messages').appendChild(userMessageContainer);
-
     userInput.value = '';
 
-    getBotResponse(userMessage);
+    setTimeout(() => {
+        // Show loading GIF
+        const loadingMessageContainer = document.createElement('div');
+        loadingMessageContainer.classList.add('message', 'bot-message');
+        const loadingGif = document.createElement('img');
+        loadingGif.src = 'img/loading.gif';
+        loadingGif.alt = 'Loading...';
+        loadingGif.style.height = '50px'; // Set the height to 50px
+        loadingMessageContainer.appendChild(loadingGif);
+        loadingMessageContainer.style.border = 'none';
+        loadingMessageContainer.style.backgroundColor = 'transparent';
+        document.getElementById('chatbot-messages').appendChild(loadingMessageContainer);
+
+        getBotResponse(userMessage).then(() => {
+            // Remove loading message after bot response is received
+            document.getElementById('chatbot-messages').removeChild(loadingMessageContainer);
+        });
+    }, 200);
 }
