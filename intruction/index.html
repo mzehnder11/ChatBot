@@ -14,17 +14,11 @@
         * {
             background-color: #060606;
         }
-        html{
-            width: 100vw;
-            height: 100vh;
-        }
         body {
-            width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
         .link-back {
             position: absolute;
@@ -36,10 +30,24 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         .content {
+            display: flex;
             color: white;
             text-align: center;
+            width: fit-content;
+        }
+        .content-left {
             font-size: larger;
-            width: 70vw;
+            color: white;
+            text-align: center;
+            width: fit-content;
+            padding-right: 2vw;
+        }
+        .content-right {
+            font-size: larger;
+            color: white;
+            text-align: center;
+            width: fit-content;
+            padding-left: 2vw;
         }
         .code {
             font-family: 'Source Code Pro', monospace;
@@ -50,8 +58,23 @@
         }
         @media (max-width: 800px) {
             .content {
-                width: 98vw;
+                display: block;
                 font-size: medium;
+                height: fit-content;
+            }
+            .content-left {
+                font-size: smaller;
+                width: 95vw;
+            }
+            .content-right {
+                margin-top: 10vh;
+                font-size: smaller;
+                width: 98vw;
+            }
+        }
+        @media(max-height: 700px) {
+            body {
+                height: auto;
             }
         }
         .small-font {
@@ -71,21 +94,42 @@
     </a></a>
 
     <div class="content">
-        <h2>Installation</h2>
-        <p>1. Install Node.js: <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a> </p>
-        <p>2. Install express and cors whit the Command <i class="code">"npm install express cors"</i></p>
-        <p>3. Install Ollama: <a href="https://ollama.com/download/mac">https://ollama.com/download/mac</a></p>
-        <p>4. Install the LLM with the Command <i class="code">"ollama run llama3.2"</i> in the Bash-Terminal</p>
-        <br>
-        <h2>Use</h2>
-        <p>1. Download the the Servermodule server.js: <a href="/../server.js" download="server.js">download</a></p>
-        <p>2. Move "server.js" to the same folder where you installed cors and express.</p>
-        <p>3. Start the local server with the Command <i class="code">"node server.js"</i></p>
-        <br>
-        <br>
-        <p class="small-font">This ChatBot is currently only available on a MAC</p>
-        <p class="small-font">Sourcecode on Github at <a class="small-font-link" href="https://github.com/mzehnder11/ChatBot">https://github.com/mzehnder11/ChatBot</a></p>
+        <div class="content-left">
+            <h1>MAC / Linux</h1>
+            <h3>Installation</h3>
+            <p>1. Install Node.js: <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a> </p>
+            <p>2. Install express and cors with the Command <i class="code">"npm install express cors"</i></p>
+            <p>3. Install Ollama: <a href="https://ollama.com/download/mac">https://ollama.com/download/mac</a></p>
+            <p>4. Install the LLM with the Command <i class="code">"ollama run llama3.2"</i> in the Bash-Terminal</p>
+            <br>
+            <h3>Use</h3>
+            <p>1. Download the the Servermodule server.js: <a href="/../server.js" download="server.js">download</a></p>
+            <p>2. Move "server.js" to the same folder where you installed cors and express.</p>
+            <p>3. Start the local server with the Command <i class="code">"node server.js"</i></p>
+            <br>
+            <br>
+            <p class="small-font">Sourcecode on Github at <a class="small-font-link" href="https://github.com/mzehnder11/ChatBot">https://github.com/mzehnder11/ChatBot</a></p>
+        </div>
+
+        <div class="content-right">
+            <h1>Windows</h1>
+            <h3>Installation</h3>
+                <p>1. Install Node.js: <a href="https://nodejs.org/en/download">https://nodejs.org/en/download</a></p>
+                <p>2. Open the Commandpromt (not Powershell) as a Administrator an navigate to your desired folder.</p>
+                <p>2. Install express and cors there with the Command <i class="code">"npm install express cors"</i> </p>
+                <p>3. Install Ollama: <a href="https://ollama.com/download/mac">https://ollama.com/download/mac</a></p>
+                <p>4. Install the LLM with the Command <i class="code">"ollama run llama3.2"</i> in the Bash-Terminal</p>
+                <br>
+                <h3>Use</h3>
+                <p>1. Download the the Servermodule server.js: <a href="/../server.js" download="server.js">download</a></p>
+                <p>2. Move "server.js" to the same folder where you installed cors and express.</p>
+                <p>3. Start the local server with the Command <i class="code">"node server.js"</i></p>
+                <br>
+                <br>
+                <p class="small-font">Sourcecode on Github at <a class="small-font-link" href="https://github.com/mzehnder11/ChatBot">https://github.com/mzehnder11/ChatBot</a></p>
+        </div>
     </div>
+    
     
 </body>
 </html>

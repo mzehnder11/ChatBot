@@ -3,7 +3,7 @@ const cors = require('cors');
 const { spawn } = require('child_process');
 const app = express();
 const port = 3000;
-let prePromt = "Bitte mache auf die Antwort auf folgende frage keine Formatierung";
+let prePromt = "Bitte mache auf die Antwort auf folgende Frage keine Formatierung";
 
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json());
@@ -44,7 +44,7 @@ app.post('/send-message', (req, res) => {
 
 app.post('/install', (req, res) => {
     // Spawn the install.js process
-    const installProcess = spawn('node', ['install.js']);
+    const installProcess = spawn('node', ['install.js'], { shell: true });
 
     let installOutput = '';
 
