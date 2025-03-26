@@ -1,0 +1,146 @@
+* {
+    background-color: 060606;
+}
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.instruction-link {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 2vh;
+    left: 2vw;
+    background-color: #007bff;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.instruction-link:hover {
+    background-color: #007bffb7;
+}
+
+.instruction-link-icon {
+    display: none;
+}
+
+.div-right {
+    background-color: #060606;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.chatbot-container {
+    height: 100%;
+    border-radius: 5px;
+    width: 60vw;
+}
+.chatbot-header {
+    background-color: transparent;
+    padding: 10px;
+    color: #ffffff94;
+    text-align: center;
+    border-bottom: 1px solid #ffffff94;
+}
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.chatbot-input {
+    display: flex;
+    text-align: right;
+    width: 60vw;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.chatbot-input input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+.chatbot-input button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+.chatbot-input button:hover {
+    background-color: #007bffb7;
+}
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60vw;
+}
+.user-message {
+    background-color: #0d0f19;
+    align-self: flex-end;
+    color: #ffffff94;
+    margin-left: auto;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    border: 1px solid #ffffff20;
+}
+.bot-message {
+    background-color: #161926;
+    align-self: flex-start;
+    color: #ffffff94;
+    margin-left: 1vw;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    margin-right: 1vw;
+    margin-right: auto;
+    border: 1px solid #ffffff20;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 920px) {
+    .chatbot-container {
+        width: 100vw;
+    }
+
+    .chatbot-input {
+        width: 90vw;
+    }
+
+    .message {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .instruction-link {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .instruction-link-text {
+        display: none;
+    }
+
+    .instruction-link-icon {
+        display: block;
+    }
+
+}

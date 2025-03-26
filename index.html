@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a class="instruction-link" href="intruction/"><div><p class="instruction-link-text">Installation and use</p><img class="instruction-link-icon" src="img/icon-book.svg" alt=""></div></a>
+
+<div class="div-right">
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h2>ChatBot</h2>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages" style="overflow-y: auto; max-height: 80vh;">
+            <!-- Nachrichten werden hier eingefügt -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeypress="sendMessage(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+
+</div>
+
+</body>
+</html>

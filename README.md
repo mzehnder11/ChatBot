@@ -1,0 +1,1 @@
+How to install and use here: [https://chatbot.malikzehnder.ch/intruction](https://chatbot.malikzehnder.ch/intruction/)
